@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-cloud-admin" />
+        <module name="spring-cloud-feign-client" />
+        <module name="spring-cloud-feign-eureka" />
+        <module name="spring-cloud-feign-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-cloud-admin" target="1.8" />
+      <module name="spring-cloud-feign" target="1.8" />
+      <module name="spring-cloud-feign-client" target="1.8" />
+      <module name="spring-cloud-feign-eureka" target="1.8" />
+      <module name="spring-cloud-feign-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
