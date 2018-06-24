@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-@EnableAdminServer
+//@EnableAdminServer
 public class FeignApplication {
 
     public static void main(String[] args) {
