@@ -10,10 +10,6 @@ public class UserClientImpl {
 
     @RequestMapping(method = RequestMethod.GET, value = "/getuser")
     public String getuserinfo() throws Exception {
-        boolean flag = true;
-        if(flag) {
-            throw new Exception("tst");
-        }
         return "userinfo";
     }
 

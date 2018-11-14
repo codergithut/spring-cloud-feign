@@ -34,7 +34,7 @@ class FooController {
                 .client(new ApacheHttpClient(HttpClients.createDefault()))
                 .encoder(encoder)
                 .decoder(decoder)
-                .target(UserClient.class, "http://localhost:8010", new UserClientFallBack());
+                .target(UserClient.class, "http://eureka:8010", new UserClientFallBack());
 
         /**
          * 构建普通的类
@@ -42,7 +42,7 @@ class FooController {
         this.fooClient = Feign.builder().client(new ApacheHttpClient(HttpClients.createDefault()))
                 .encoder(encoder)
                 .decoder(decoder)
-                .target(UserClient.class, "http://localhost:8010");
+                .target(UserClient.class, "http://eureka:8010");
 
     }
 
