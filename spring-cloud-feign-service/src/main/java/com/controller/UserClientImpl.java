@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserClientImpl {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/getuser")
+    @RequestMapping(method = RequestMethod.GET, value = "/getuser", consumes="application/json")
     public String getuserinfo() throws Exception {
         return "userinfo";
     }
