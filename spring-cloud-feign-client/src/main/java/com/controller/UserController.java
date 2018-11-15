@@ -18,10 +18,6 @@ import java.util.List;
 @RestController
 public class UserController {
 
-
-    @Autowired
-    FooController fooController;
-
     @Autowired
     UserClient userClient;
 
@@ -47,18 +43,6 @@ public class UserController {
         Object o = new Object();
         ResponseEntity<String> restExchange = restTemplate.exchange(serUri, HttpMethod.GET, null, String.class, o);
         return restExchange.getBody();
-    }
-
-    @RequestMapping(value = "/getuserinfo1", method = RequestMethod.GET)
-    public String getuserinfostr() {
-        String ss = fooController.getFooClient().getuserinfo();
-        return ss;
-    }
-
-    @RequestMapping(value = "/getuserinfo3", method = RequestMethod.GET)
-    public String getuserinfostr1() {
-        String ss = fooController.getHystClient().getuserinfo();
-        return ss;
     }
 
 
