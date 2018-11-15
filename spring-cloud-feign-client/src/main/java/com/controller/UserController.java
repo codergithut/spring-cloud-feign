@@ -2,9 +2,10 @@ package com.controller;
 
 import com.client.UserClient;
 import com.netflix.appinfo.InstanceInfo;
-import com.netflix.discovery.DiscoveryClient;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,9 +37,9 @@ public class UserController {
     public String testClient() {
         StringBuffer ips = new StringBuffer();
         RestTemplate restTemplate = new RestTemplate();
-        List<InstanceInfo> instances = discoveryClient.getInstancesById("feign-service");
+        List<ServiceInstance> instances = discoveryClient.getInstances("feign-service");
         instances.stream().forEach( t -> {
-            ips.append(t.getId() + ":");
+            ips.append(t.getUri() + ":");
         });
         return ips.toString();
     }
