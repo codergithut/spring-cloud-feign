@@ -6,6 +6,8 @@ import com.netflix.appinfo.InstanceInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -41,7 +43,10 @@ public class UserController {
         instances.stream().forEach( t -> {
             ips.append(t.getUri() + ":");
         });
-        return ips.toString();
+        String serUri = instances.get(0).getUri() + "/getuser";
+        Object o = new Object();
+        ResponseEntity<String> restExchange = restTemplate.exchange(serUri, HttpMethod.GET, null, String.class, o);
+        return restExchange.getBody();
     }
 
     @RequestMapping(value = "/getuserinfo1", method = RequestMethod.GET)
