@@ -1,7 +1,7 @@
 spring:
   cloud:
     consul:
-      host: eureka
+      host: dev-consul
       port: 8500
       discovery:
         healthCheckPath:  /health
