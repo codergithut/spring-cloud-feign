@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    consul:
+      host: eureka
+      port: 8500
+      discovery:
+        healthCheckPath:  /health
+        healthCheckInterval: 15s
+      config:
+            #启用consul config
+        enabled: true
+            #配置文件的前缀文件夹名
+        prefix: consul
+            #共享配置的文件夹名
+        defaultContext: springcloud
+        #profile配置的文件夹名分隔符
+        #profileSeparator: '.'
