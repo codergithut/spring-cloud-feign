@@ -3,9 +3,6 @@ spring:
     consul:
       host: dev-consul
       port: 8500
-      discovery:
-        healthCheckPath:  /health
-        healthCheckInterval: 15s
       config:
             #启用consul config
         enabled: true
