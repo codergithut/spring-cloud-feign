@@ -1,0 +1,13 @@
+#Setting the logging levels for the service
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+
+server:
+  contextPath:   /auth

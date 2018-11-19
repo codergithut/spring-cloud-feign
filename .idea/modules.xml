@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-feign-client/spring-cloud-feign-client.iml" filepath="$PROJECT_DIR$/spring-cloud-feign-client/spring-cloud-feign-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-feign-eureka/spring-cloud-feign-eureka.iml" filepath="$PROJECT_DIR$/spring-cloud-feign-eureka/spring-cloud-feign-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-feign-service/spring-cloud-feign-service.iml" filepath="$PROJECT_DIR$/spring-cloud-feign-service/spring-cloud-feign-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-oauth2/spring-cloud-oauth2.iml" filepath="$PROJECT_DIR$/spring-cloud-oauth2/spring-cloud-oauth2.iml" />
     </modules>
   </component>
 </project>
